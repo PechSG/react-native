@@ -7,6 +7,7 @@ import IconButton from '@material-ui/core/IconButton';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import Group from './Group'
 
 export default props =>
     <AppBar position="static">
@@ -21,6 +22,7 @@ export default props =>
             <IconButton
                 aria-label="account of current user"
                 color="inherit"
+                onClick= {Group}
               >
                 <AccountCircle />
               </IconButton>

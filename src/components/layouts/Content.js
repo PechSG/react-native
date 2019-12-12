@@ -48,6 +48,12 @@ const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background.paper,
   },
+  card: {
+    maxWidth: 345,
+  },
+  media: {
+    height: 140,
+  },
 }));
 
 export default function FullWidthTabs() {
@@ -84,10 +90,36 @@ export default function FullWidthTabs() {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
-          Item One
+          <Card>
+            <CardActionArea classname={classes.card}>
+              <CardMedia className={classes.media} 
+                image="http://www.kampotwritersfestival.com/wp-content/uploads/2017/10/Liger-Learning.jpg"
+                title="Saving Group #1"
+              />
+              <CardContent>
+                <Typography>
+                  Group #1
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+          <br />
+          <Card>
+            <CardActionArea classname={classes.card}>
+              <CardMedia className={classes.media} 
+                image="https://pbs.twimg.com/media/DqM7kMAVAAAToP1.jpg:large"
+                title="Saving Group #2"
+              />
+              <CardContent>
+                <Typography>
+                  Group #2
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-          Item Two
+          Notifications
         </TabPanel>
       </SwipeableViews>
     </div>

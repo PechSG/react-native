@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import 'typeface-roboto';
 import Header from './src/components/layouts/Header'
 import Content from './src/components/layouts/Content'
+import Group from './src/components/layouts/Group'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
