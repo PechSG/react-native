@@ -1,8 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import { Platform, StyleSheet, Text, View, Button } from 'react-native';
+import { makeStyles } from '@material-ui/core/styles';
+import { AppBar, Toolbar} from '@material-ui';
 import { AccessAlarm, ThreeDRotation } from '@material-ui/icons';
 import 'typeface-roboto';
-import Header from './components/layouts/Header'
+import Header from './src/components/layouts/Header'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
