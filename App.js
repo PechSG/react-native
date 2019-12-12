@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Platform, StyleSheet, Text, View, Button } from 'react-native';
 import { AccessAlarm, ThreeDRotation } from '@material-ui/icons';
 import 'typeface-roboto';
+import Header from './components/layouts/Header'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -11,11 +12,12 @@ const instructions = Platform.select({
 export default class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
+      <Fragment style={styles.container}>
+        <Header />
         <Text style={styles.welcome}>Welcome to React Native!</Text>
         <Text style={styles.instructions}>To get started, edit App.js</Text>
         <Text style={styles.instructions}>{instructions}</Text>
-      </View>
+      </Fragment>
     );
   }
 }
