@@ -12,8 +12,6 @@ export default props =>
             <Typography variant="h6" color="inherit">Home</Typography>
             <IconButton
                 aria-label="account of current user"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
                 color="inherit"
               >
                 <AccountCircle />
