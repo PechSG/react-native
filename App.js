@@ -16,7 +16,7 @@ const instructions = Platform.select({
 export default class App extends Component {
   render() {
     return (
-      <Fragment style={styles.container}>
+      <Fragment>
         <Header />
         <NavBar />
       </Fragment>

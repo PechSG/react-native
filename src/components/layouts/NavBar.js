@@ -20,7 +20,7 @@ function TabPanel(props) {
       aria-labelledby={`full-width-tab-${index}`}
       {...other}
     >
-      {value === index && <Box p={3}>{children}</Box>}
+      {value === index && <Box p={2}>{children}</Box>}
     </Typography>
   );
 }
@@ -41,7 +41,6 @@ function a11yProps(index) {
 const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background.paper,
-    width: 500,
   },
 }));
 
@@ -71,7 +70,6 @@ export default function FullWidthTabs() {
         >
           <Tab label="Item One" {...a11yProps(0)} />
           <Tab label="Item Two" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
         </Tabs>
       </AppBar>
       <SwipeableViews
@@ -84,9 +82,6 @@ export default function FullWidthTabs() {
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
           Item Two
-        </TabPanel>
-        <TabPanel value={value} index={2} dir={theme.direction}>
-          Item Three
         </TabPanel>
       </SwipeableViews>
     </div>
