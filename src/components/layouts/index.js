@@ -1,5 +1,6 @@
-import Header from './src/components/layouts/Header'
+import Header from '.layouts/Header'
+import NavBar from '.layouts/NavBar'
 
 export {
-    Header
+    Header, NavBar
 }
