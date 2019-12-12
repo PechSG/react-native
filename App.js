@@ -3,6 +3,7 @@ import { Platform, StyleSheet, Text, View, Button } from 'react-native';
 import { makeStyles } from './node_modules/@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
 import 'typeface-roboto';
 import Header from './src/components/layouts/Header'
 
