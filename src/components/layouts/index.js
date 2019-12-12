@@ -1,6 +1,6 @@
 import Header from '.layouts/Header'
-import NavBar from '.layouts/NavBar'
+import Content from '.layouts/Content'
 
 export {
-    Header, NavBar
+    Header, Content
 }

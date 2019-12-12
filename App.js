@@ -6,7 +6,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import 'typeface-roboto';
 import Header from './src/components/layouts/Header'
-import NavBar from './src/components/layouts/NavBar'
+import Content from './src/components/layouts/Content'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -18,7 +18,7 @@ export default class App extends Component {
     return (
       <Fragment>
         <Header />
-        <NavBar />
+        <Content />
       </Fragment>
     );
   }
