@@ -22,7 +22,6 @@ export default props =>
             <IconButton
                 aria-label="account of current user"
                 color="inherit"
-                onClick= {Group}
               >
                 <AccountCircle />
               </IconButton>
