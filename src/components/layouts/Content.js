@@ -1,18 +1,26 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import SwipeableViews from 'react-swipeable-views';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
+import React from "react";
+import PropTypes from "prop-types";
+import SwipeableViews from "react-swipeable-views";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
+import Tabs from "@material-ui/core/Tabs";
+import Tab from "@material-ui/core/Tab";
+import Typography from "@material-ui/core/Typography";
+import Box from "@material-ui/core/Box";
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import CardMedia from "@material-ui/core/CardMedia";
+import Button from "@material-ui/core/Button";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
+import ListItemAvatar from "@material-ui/core/ListItemAvatar";
+import Avatar from "@material-ui/core/Avatar";
+import ImageIcon from "@material-ui/icons/Image";
+import WorkIcon from "@material-ui/icons/Work";
+import BeachAccessIcon from "@material-ui/icons/BeachAccess";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -34,26 +42,26 @@ function TabPanel(props) {
 TabPanel.propTypes = {
   children: PropTypes.node,
   index: PropTypes.any.isRequired,
-  value: PropTypes.any.isRequired,
+  value: PropTypes.any.isRequired
 };
 
 function a11yProps(index) {
   return {
     id: `full-width-tab-${index}`,
-    'aria-controls': `full-width-tabpanel-${index}`,
+    "aria-controls": `full-width-tabpanel-${index}`
   };
 }
 
 const useStyles = makeStyles(theme => ({
   root: {
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: theme.palette.background.paper
   },
   card: {
-    maxWidth: 345,
+    maxWidth: 345
   },
   media: {
-    height: 140,
-  },
+    height: 140
+  }
 }));
 
 export default function FullWidthTabs() {
@@ -85,41 +93,39 @@ export default function FullWidthTabs() {
         </Tabs>
       </AppBar>
       <SwipeableViews
-        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+        axis={theme.direction === "rtl" ? "x-reverse" : "x"}
         index={value}
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
           <Card>
             <CardActionArea classname={classes.card}>
-              <CardMedia className={classes.media} 
+              <CardMedia
+                className={classes.media}
                 image="http://www.kampotwritersfestival.com/wp-content/uploads/2017/10/Liger-Learning.jpg"
                 title="Saving Group #1"
               />
               <CardContent>
-                <Typography>
-                  Group #1
-                </Typography>
+                <Typography>Group #1</Typography>
               </CardContent>
             </CardActionArea>
           </Card>
           <br />
           <Card>
             <CardActionArea classname={classes.card}>
-              <CardMedia className={classes.media} 
+              <CardMedia
+                className={classes.media}
                 image="https://pbs.twimg.com/media/DqM7kMAVAAAToP1.jpg:large"
                 title="Saving Group #2"
               />
               <CardContent>
-                <Typography>
-                  Group #2
-                </Typography>
+                <Typography>Group #2</Typography>
               </CardContent>
             </CardActionArea>
           </Card>
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-          Notifications
+          Notfications
         </TabPanel>
       </SwipeableViews>
     </div>

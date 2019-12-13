@@ -12,7 +12,7 @@ import Group from './Group'
 export default props =>
     <AppBar position="static">
         <Toolbar>
-            <Typography variant="h6" color="inherit">Home</Typography>
+            <Typography variant="h6" color="inherit" align="center">Home</Typography>
             <Grid
                 container
                 direction="row"
