@@ -10,9 +10,10 @@
   "dependencies": {
     "@material-ui/core": "^4.7.2",
     "@material-ui/icons": "^4.5.1",
+    "axios": "^0.19.0",
     "react": "~16.9.0",
     "react-dom": "~16.9.0",
-    "react-native": "~0.61.4",
+    "react-native": "~0.59.8",
     "react-native-gesture-handler": "~1.5.0",
     "react-native-reanimated": "~1.4.0",
     "react-native-screens": "^2.0.0-alpha.17",
@@ -26,7 +27,7 @@
   "devDependencies": {
     "@babel/core": "~7.6.0",
     "babel-jest": "~24.9.0",
-    "expo": "^35.0.1",
+    "expo": "^35.0.0",
     "jest": "~24.9.0",
     "jetifier": "~1.6.4",
     "metro-react-native-babel-preset": "~0.56.0",
