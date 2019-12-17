@@ -2,39 +2,19 @@ import * as React from 'react';
 import { Button, View, Text } from 'react-native';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
-import { Group }  from './src/components/layouts/Group';
 
-class HomeScreen extends React.Component {
-  render() {
-    return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Home Screen</Text>
-        <Button
-          title="Go to Details"
-          onPress={() => this.props.navigation.navigate('Details')}
-        />
-      </View>
-    );
-  }
-}
-
-class DetailsScreen extends React.Component {
-  render() {
-    return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Details Screen</Text>
-      </View>
-    );
-  }
-}
+import { LoginScreen, RegisterScreen, WelcomeScreen, DashboardScreen, UserProfileScreen } from './src/screens/index';
 
 const RootStack = createStackNavigator(
   {
-    Home: HomeScreen,
-    Details: Group,
+    Welcome: WelcomeScreen,
+    Login: LoginScreen,
+    Register: RegisterScreen,
+    Home: DashboardScreen,
+    UserProfile: UserProfileScreen
   },
   {
-    initialRouteName: 'Home',
+    initialRouteName: 'Welcome',
   }
 );
 

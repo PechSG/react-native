@@ -1,3 +1,5 @@
+
+
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View, Button } from 'react-native';
 import AppBar from '@material-ui/core/AppBar';
@@ -7,14 +9,23 @@ import IconButton from '@material-ui/core/IconButton';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import Header from './Header'
 
-export class Group extends Component {
+import { Header } from '../../organisms/index';
+import { LoginForm } from '../../molecules/index';
+
+export class LoginScreen extends Component {
     render() {
         return (
-          <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text>Group Screen</Text>
+          <View>
+            {/* <Header screenTitle="Login"></Header> */}
+            <Text>Login</Text>
+            <Button
+          title="UserProfile"
+          onPress={() => this.props.navigation.navigate('UserProfile')}
+        />
+        <LoginForm />
           </View>
+          
         );
       }
 

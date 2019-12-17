@@ -7,12 +7,12 @@ import IconButton from '@material-ui/core/IconButton';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import Group from './Group'
+
 
 export default props =>
     <AppBar position="static">
         <Toolbar>
-            <Typography variant="h6" color="inherit" align="center">Home</Typography>
+            <Typography variant="h6" color="inherit" align="center">{props.screenTitle}</Typography>
             <Grid
                 container
                 direction="row"
