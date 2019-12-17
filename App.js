@@ -1,22 +1,47 @@
-import React, { Component, Fragment } from 'react';
-import { Platform, StyleSheet, Text, View, Button } from 'react-native';
-import { makeStyles } from './node_modules/@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import 'typeface-roboto';
-import Header from './src/components/layouts/Header'
-import Content from './src/components/layouts/Content'
-import Group from './src/components/layouts/Group'
+import * as React from 'react';
+import { Button, View, Text } from 'react-native';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import { Group }  from './src/components/layouts/Group';
 
-export default class App extends Component {
+class HomeScreen extends React.Component {
   render() {
     return (
-      <Fragment>
-        <Header />
-        <Content />
-      </Fragment>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Text>Home Screen</Text>
+        <Button
+          title="Go to Details"
+          onPress={() => this.props.navigation.navigate('Details')}
+        />
+      </View>
     );
   }
 }
 
+class DetailsScreen extends React.Component {
+  render() {
+    return (
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Text>Details Screen</Text>
+      </View>
+    );
+  }
+}
+
+const RootStack = createStackNavigator(
+  {
+    Home: HomeScreen,
+    Details: Group,
+  },
+  {
+    initialRouteName: 'Home',
+  }
+);
+
+const AppContainer = createAppContainer(RootStack);
+
+export default class App extends React.Component {
+  render() {
+    return <AppContainer />;
+  }
+}

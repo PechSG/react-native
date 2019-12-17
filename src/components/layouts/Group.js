@@ -9,8 +9,14 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Header from './Header'
 
-export default props =>
-    <div>
-        <Header />
-        <Text>Group Page</Text>
-    </div>
+export class Group extends Component {
+    render() {
+        return (
+          <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+            <Text>Group Screen</Text>
+          </View>
+        );
+      }
+
+    
+}
