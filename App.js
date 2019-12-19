@@ -3,9 +3,6 @@ import { Button, View, Text, TouchableOpacity } from 'react-native';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
-<<<<<<< Updated upstream
-import { LoginScreen, RegisterScreen, WelcomeScreen, DashboardScreen, UserProfileScreen } from './src/screens/index';
-=======
 class HomeScreen extends React.Component {
   render() {
     return (
@@ -49,7 +46,6 @@ class DetailsScreen extends React.Component {
     );
   }
 }
->>>>>>> Stashed changes
 
 const RootStack = createStackNavigator(
   {
