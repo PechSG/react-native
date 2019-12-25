@@ -1,5 +1,3 @@
-
-
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View, Button } from 'react-native';
 import AppBar from '@material-ui/core/AppBar';
@@ -18,7 +16,6 @@ export class LoginScreen extends Component {
         return (
           <View>
             {/* <Header screenTitle="Login"></Header> */}
-            <Text>Login</Text>
             <Button
           title="UserProfile"
           onPress={() => this.props.navigation.navigate('UserProfile')}

@@ -16,7 +16,6 @@ export class DashboardScreen extends Component {
         return (
           <View>
             {/* <Header screenTitle="Login"></Header> */}
-            <Text>Hello</Text>
             <FullWidthTabs />
           </View>
         );
